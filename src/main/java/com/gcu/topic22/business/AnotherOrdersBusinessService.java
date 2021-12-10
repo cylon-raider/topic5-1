@@ -21,6 +21,13 @@ public class AnotherOrdersBusinessService implements OrdersBusinessServiceInterf
     }
 
     @Override
+    public OrderModel getOrderById(String id)
+    {
+        return null;
+    }
+
+
+    @Override
     public List<OrderModel> getOrders()
     {
         // Get all the Entity Orders

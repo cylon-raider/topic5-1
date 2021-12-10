@@ -10,6 +10,8 @@ public interface OrdersBusinessServiceInterface {
 
     public List<OrderModel> getOrders();
 
+    public OrderModel getOrderById(String id);
+
     public void init();
 
     public void destroy();

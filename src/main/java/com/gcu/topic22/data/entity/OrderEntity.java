@@ -17,9 +17,7 @@ public class OrderEntity
     @Indexed(unique=true)
     private String productName;
 
-
     private float price;
-
 
     private int quantity;
 

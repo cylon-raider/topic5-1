@@ -51,8 +51,9 @@ public class OrderDataService implements DataAccessInterface<OrderEntity> {
      * CRUD: finder to return a single entity
      */
 
-    public OrderEntity findById(int id) {
-        return null;
+    public OrderEntity findById(String id)
+    {
+        return ordersRepository.getOrderById(id);
     }
 
     /**

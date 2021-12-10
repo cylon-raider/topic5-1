@@ -21,6 +21,16 @@ public class OrdersBusinessService implements OrdersBusinessServiceInterface
     }
 
     @Override
+    public OrderModel getOrderById(String id)
+    {
+        // Get the Entity Order
+        OrderEntity orderEntity = service.findById(id);
+
+        // Convert Entity Order to Domain Order
+        return new OrderModel(orderEntity.getId(), orderEntity.getOrderNo(), orderEntity.getProductName(), orderEntity.getPrice(), orderEntity.getQuantity());
+    }
+
+    @Override
     public List<OrderModel> getOrders()
     {
         // Get all the Entity Orders
